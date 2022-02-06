@@ -1,5 +1,6 @@
 package travel.goodpoint.PointGuide.services;
 
+import com.google.common.collect.ImmutableList;
 import org.springframework.stereotype.Service;
 import travel.goodpoint.PointGuide.data.PointRepository;
 import travel.goodpoint.PointGuide.models.Point;
@@ -14,7 +15,7 @@ public class PointService {
         this.pointRepository = pointRepository;
     }
 
-    public Iterable<Point> getAllPoints() {
-        return pointRepository.findAll();
+    public ImmutableList<Point> getAllPoints() {
+        return ImmutableList.copyOf(pointRepository.findAll());
     }
 }

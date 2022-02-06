@@ -3,16 +3,15 @@ package travel.goodpoint.PointGuide.models;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
-@Table(name="POINT")
 @Getter
-@Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name="POINT")
 public class Point {
 
     @Id
@@ -35,4 +34,10 @@ public class Point {
     @Column(name="CATEGORY")
     @Enumerated(value = EnumType.STRING)
     private Category category;
+
+    @Column(name="STORY")
+    private String story;
+
+    @OneToMany(mappedBy = "point")
+    private List<Comment> comments;
 }

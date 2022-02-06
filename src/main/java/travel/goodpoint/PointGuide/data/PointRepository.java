@@ -3,7 +3,6 @@ package travel.goodpoint.PointGuide.data;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RestResource;
 import org.springframework.lang.NonNull;
-import org.springframework.lang.NonNullApi;
 import travel.goodpoint.PointGuide.models.Point;
 
 public interface PointRepository extends CrudRepository<Point, Long> {
