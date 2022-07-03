@@ -1,9 +1,9 @@
-package travel.goodpoint.PointGuide.services;
+package travel.goodpoint.server.services;
 
 import com.google.common.collect.ImmutableList;
 import org.springframework.stereotype.Service;
-import travel.goodpoint.PointGuide.data.PointRepository;
-import travel.goodpoint.PointGuide.models.Point;
+import travel.goodpoint.server.data.PointRepository;
+import travel.goodpoint.server.models.Point;
 
 
 @Service

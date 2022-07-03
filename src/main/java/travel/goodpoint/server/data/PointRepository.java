@@ -1,9 +1,9 @@
-package travel.goodpoint.PointGuide.data;
+package travel.goodpoint.server.data;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RestResource;
 import org.springframework.lang.NonNull;
-import travel.goodpoint.PointGuide.models.Point;
+import travel.goodpoint.server.models.Point;
 
 public interface PointRepository extends CrudRepository<Point, Long> {
 

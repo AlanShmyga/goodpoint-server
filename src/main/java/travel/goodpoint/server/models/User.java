@@ -1,4 +1,4 @@
-package travel.goodpoint.PointGuide.models;
+package travel.goodpoint.server.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

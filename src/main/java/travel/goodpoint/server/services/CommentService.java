@@ -1,9 +1,9 @@
-package travel.goodpoint.PointGuide.services;
+package travel.goodpoint.server.services;
 
 import com.google.common.collect.ImmutableList;
 import org.springframework.stereotype.Service;
-import travel.goodpoint.PointGuide.data.CommentRepository;
-import travel.goodpoint.PointGuide.models.Comment;
+import travel.goodpoint.server.data.CommentRepository;
+import travel.goodpoint.server.models.Comment;
 
 @Service
 public class CommentService {
