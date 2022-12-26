@@ -7,11 +7,10 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.util.List;
 
-@Entity
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name="POINT")
+@Entity(name="POINT")
 public class Point {
 
     @Id

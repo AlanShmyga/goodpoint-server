@@ -6,11 +6,10 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-@Entity
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name="COMMENTS")
+@Entity(name="COMMENTS")
 public class Comment {
 
     @Id

@@ -1,9 +1,12 @@
 package travel.goodpoint.server.data;
 
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RestResource;
 import org.springframework.lang.NonNull;
 import travel.goodpoint.server.models.Point;
+
+import java.util.List;
 
 public interface PointRepository extends CrudRepository<Point, Long> {
 
@@ -39,4 +42,10 @@ public interface PointRepository extends CrudRepository<Point, Long> {
     @Override
     @RestResource(exported = false)
     void deleteAll();
+
+    @Query(value = "SELECT * FROM point " +
+            "WHERE ST_DWithin(geom, ST_GeomFromText(FORMAT('POINT(%s %s)', :lat, :lon)), :radius, true)",
+            nativeQuery = true)
+    @RestResource(path = "/inRange")
+    List<Point> findPointsInRadius(double lat, double lon, double radius);
 }
